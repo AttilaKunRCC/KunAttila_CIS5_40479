@@ -12,14 +12,46 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Gaddis_8thEd_Chap2_Prob10_MilesPerGallon.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob13_CircuitBoardPrice.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob14_PersonalInfo.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob1_SumOf2Numbers.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob3_SalesTax.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob4_RestaurantBill.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob6_AnnualPay.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap2_Prob8_TotalPurchase.cpp</itemPath>
+      <logicalFolder name="f1"
+                     displayName="Gaddis_8thEd_Chap2_Prob10_MilesPerGallon"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob10_MilesPerGallon.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="Gaddis_8thEd_Chap2_Prob13_CircuitBoardPrice"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob13_CircuitBoardPrice.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3"
+                     displayName="Gaddis_8thEd_Chap2_Prob14_PersonalInfo"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob14_PersonalInfo.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="Gaddis_8thEd_Chap2_Prob1_SumOf2Numbers"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob1_SumOf2Numbers.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5"
+                     displayName="Gaddis_8thEd_Chap2_Prob3_SalesTax"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob3_SalesTax.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6"
+                     displayName="Gaddis_8thEd_Chap2_Prob4_RestaurantBill"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob4_RestaurantBill.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7"
+                     displayName="Gaddis_8thEd_Chap2_Prob6_AnnualPay"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob6_AnnualPay.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f8"
+                     displayName="Gaddis_8thEd_Chap2_Prob8_TotalPurchase"
+                     projectFiles="true">
+        <itemPath>Gaddis_8thEd_Chap2_Prob8_TotalPurchase.cpp</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"

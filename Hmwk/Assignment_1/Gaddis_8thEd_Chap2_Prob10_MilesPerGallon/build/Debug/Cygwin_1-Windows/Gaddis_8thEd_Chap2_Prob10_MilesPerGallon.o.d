@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chap2_Prob10_MilesPerGallon.o: \
+ Gaddis_8thEd_Chap2_Prob10_MilesPerGallon.cpp

@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chap2_Prob1_SumOf2Numbers_1.o: \
+ Gaddis_8thEd_Chap2_Prob1_SumOf2Numbers_1.cpp

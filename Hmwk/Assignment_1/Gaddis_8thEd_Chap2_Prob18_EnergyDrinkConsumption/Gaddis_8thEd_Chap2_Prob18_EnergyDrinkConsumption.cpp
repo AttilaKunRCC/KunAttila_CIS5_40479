@@ -7,7 +7,7 @@
 
 //System Libraries
 #include <iostream>
-#include <iomanip>
+
 using namespace std;
 
 //Executable code begins here!!!
@@ -30,8 +30,8 @@ int main(int argc, char** argv) {
 //  Compute the number of EnergyDrinkCustomers
 	numberOfEnergyDrinkCustomers = numberOfcustomers * rateOfEnergyDrinkCustomers /100;
 //
-//  Assgins numberOfEnergyDrinkCustomers (float) to approxiamte (int)
-//  becasue the approximate number of custemoers should be integer.
+//  Assigns numberOfEnergyDrinkCustomers (float) to approximate (int)
+//  because the approximate number of customers should be integer.
 	approximate = numberOfEnergyDrinkCustomers;
 //
 //  Output Result

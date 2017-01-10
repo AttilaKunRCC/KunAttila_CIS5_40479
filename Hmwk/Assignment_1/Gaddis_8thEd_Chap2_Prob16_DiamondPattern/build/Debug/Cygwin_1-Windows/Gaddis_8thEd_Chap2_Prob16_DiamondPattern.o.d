@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chap2_Prob16_DiamondPattern.o: \
+ Gaddis_8thEd_Chap2_Prob16_DiamondPattern.cpp

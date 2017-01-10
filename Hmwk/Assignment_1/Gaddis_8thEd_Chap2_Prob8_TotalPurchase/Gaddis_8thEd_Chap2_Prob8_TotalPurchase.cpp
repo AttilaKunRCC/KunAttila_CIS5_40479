@@ -7,13 +7,13 @@
 
 //System Libraries
 #include <iostream>
-#include <iomanip>
+
 using namespace std;
 
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    double item1=15.95, item2=24.95, item3=6.95, item4=12.95, item5=3.95, Sales_total_with_tax, tax=0.07, Total_amount_items;
+    float item1=15.95, item2=24.95, item3=6.95, item4=12.95, item5=3.95, Sales_total_with_tax, tax=0.07, Total_amount_items;
     float Sales_tax;
     
    //Output values
@@ -32,12 +32,8 @@ int main(int argc, char** argv) {
     cout << "\n\nThe Total amount for items purchased is: \n" << Total_amount_items;
     
     cout << "\n\nThe Sales tax amount for this purchase is: \n" << Sales_tax;
-    
-
-    //the below std::cout will print only 2 digits in the total amount
-    std::cout << std::fixed;
-    std::cout << std::setprecision(2);
-    std::cout << "\n\nThe Sales Total amount with tax for this purchase is: \n" << Sales_total_with_tax + Sales_tax;
+   
+    cout << "\n\nThe Sales Total amount with tax for this purchase is: \n" << Sales_total_with_tax + Sales_tax;
 
     //Exit stage right!
     return 0;

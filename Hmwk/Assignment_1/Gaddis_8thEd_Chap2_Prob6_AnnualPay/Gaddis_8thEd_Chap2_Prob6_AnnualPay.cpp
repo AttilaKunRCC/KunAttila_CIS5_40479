@@ -1,5 +1,11 @@
+/* 
+  File:   Gaddis_8thEd_Chap2_Prob6_AnnualPay
+  Author: Attila Kun
+  Created on January 7, 2017, 12:15 PM
+  Purpose:  calculate the annual pay
+ */
 #include <iostream>
-//#include <fstream>
+
 using namespace std;
 int main(int argc, char** argv) {
 /*******************************************************************************************************************************************
@@ -9,15 +15,15 @@ owes you in back pay from the last 6 months.
 
     // I will define my variables here
 
-    double AnnualPay, PayPeriod = 26;
-    double PayAmount=2200.0;
+    float AnnualPay, PayPeriod = 26;
+    float PayAmount=2200.0;
 
     // I will now let the user know what the program's intended use is
 
     cout << "\n\nHello employee, this is to calculate your total annual pay by multiplying the pay amount by the number of pay periods in a year ";
     cout << "store the result in the AnnualPay variable on the screen!!\n\n";
        
-    //Here I will create my formuals
+    //Here I will create my formulas
 
     AnnualPay = PayPeriod * PayAmount;
 

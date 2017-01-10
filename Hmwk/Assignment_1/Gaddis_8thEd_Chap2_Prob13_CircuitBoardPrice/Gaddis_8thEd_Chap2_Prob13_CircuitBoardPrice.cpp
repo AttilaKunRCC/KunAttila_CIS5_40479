@@ -14,8 +14,8 @@ using namespace std;
 int main(int argc, char** argv) {
 
     //Declare Variables
-    double CompanyProfit=0.35, circuitBoardSelling;
-    double circuitBoardCost = 14.95;
+    float CompanyProfit=0.35, circuitBoardSelling;
+    float circuitBoardCost = 14.95;
     
     //Formulas
     circuitBoardSelling = (0.35* circuitBoardCost)+ CompanyProfit;

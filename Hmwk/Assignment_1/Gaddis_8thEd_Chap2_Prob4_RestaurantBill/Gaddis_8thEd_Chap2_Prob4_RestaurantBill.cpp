@@ -14,7 +14,7 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare Variables
     float Total_with_Sales_Tax, Total_with_tip, purchase;
-    double Tax=0.0675, Tip=0.2;
+    float Tax=0.0675, Tip=0.2;
     //Input values
     
     //Process by mapping inputs to outputs

@@ -1,8 +1,9 @@
 /* 
   File:   Gaddis_8thEd_Chap2_Prob18_EnergyDrinkConsumption
-  Author: Attila Kun
+  Author: Shinya Yamamoto
   Created on January 7, 2017, 15:55 PM
   Purpose:  Energy Drink Consumption customer calculation
+  Other: amounts have been changed, code reviewed and fixed some grammatical errors
  */
 
 //System Libraries

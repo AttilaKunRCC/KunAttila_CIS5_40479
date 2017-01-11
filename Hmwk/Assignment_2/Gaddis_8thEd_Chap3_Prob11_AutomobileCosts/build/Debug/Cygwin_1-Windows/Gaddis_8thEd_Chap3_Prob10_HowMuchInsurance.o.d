@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chap3_Prob10_HowMuchInsurance.o: \
+ Gaddis_8thEd_Chap3_Prob10_HowMuchInsurance.cpp

@@ -36,7 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o \
-	${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_Copy.o
+	${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o
 
 
 # C Compiler Flags
@@ -68,10 +68,11 @@ ${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o: Gaddis_8thEd_Chap3_Pro
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp
 
-${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_Copy.o: Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_Copy.cpp
+.NO_PARALLEL:${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o
+${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o: Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_Copy.o Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_Copy.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.cpp
 
 # Subprojects
 .build-subprojects:

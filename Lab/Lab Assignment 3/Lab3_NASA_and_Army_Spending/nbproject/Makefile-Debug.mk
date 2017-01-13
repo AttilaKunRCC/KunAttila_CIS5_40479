@@ -23,7 +23,7 @@ AS=as
 # Macros
 CND_PLATFORM=Cygwin_1-Windows
 CND_DLIB_EXT=dll
-CND_CONF=Release
+CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 
@@ -35,8 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o \
-	${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o
+	${OBJECTDIR}/Lab3_NASA_and_Army_Spending.o
 
 
 # C Compiler Flags
@@ -57,22 +56,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chap3_prob14_monthlysalestax.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lab3_nasa_and_army_spending.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chap3_prob14_monthlysalestax.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lab3_nasa_and_army_spending.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chap3_prob14_monthlysalestax ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lab3_nasa_and_army_spending ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o: Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp
+${OBJECTDIR}/Lab3_NASA_and_Army_Spending.o: Lab3_NASA_and_Army_Spending.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp
-
-.NO_PARALLEL:${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o
-${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o: Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.o Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT\ Use.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Lab3_NASA_and_Army_Spending.o Lab3_NASA_and_Army_Spending.cpp
 
 # Subprojects
 .build-subprojects:

@@ -12,8 +12,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp</itemPath>
-      <itemPath>Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT Use.cpp</itemPath>
+      <itemPath>Lab3_NASA_and_Army_Spending.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -37,15 +36,7 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT Use.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="Lab3_NASA_and_Army_Spending.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -68,15 +59,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax_DonT Use.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="Lab3_NASA_and_Army_Spending.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.o: \
+ Gaddis_8thEd_Chap3_Prob14_MonthlySalesTax.cpp

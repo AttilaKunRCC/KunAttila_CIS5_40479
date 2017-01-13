@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chap3_Prob22_AngleCalculator.o: \
+ Gaddis_8thEd_Chap3_Prob22_AngleCalculator.cpp

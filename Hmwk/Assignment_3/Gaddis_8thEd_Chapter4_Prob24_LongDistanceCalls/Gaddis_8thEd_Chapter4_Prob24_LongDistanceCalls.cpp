@@ -5,8 +5,8 @@
   Purpose:  
 * - a program that asks the starting time and the number of minutes of the call and displays the charges
 * - the prog should ask for the time to be entered as a floating-point number in the form HH.MM.
-* - the program should not accept times that are greater than 23:59. Also, no number whose last 2 digits are greater than 59 should be accepted.
-* -           
+* - the program should not accept times that are greater than 23:59. 
+ * Also, no number whose last 2 digits are greater than 59 should be accepted.      
             
  */
 
@@ -22,6 +22,12 @@ int main(int argc, char** argv) {
     float time, time2, minutes, charges;
     
     time2 = time - static_cast<int>(time); //gets the fractional part (minutes)
+    
+    if(time2 > 0.59){
+        cout << "Starting time (minutes) cannot be greater than 59!!\n\n"
+                << "Enter the time again (HH.MM): ";
+        cin >> time;
+    }
     
     //Input values
     cout << setprecision(2) << fixed;

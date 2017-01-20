@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chapter5_Prob4_CaloriesBurned.o: \
+ Gaddis_8thEd_Chapter5_Prob4_CaloriesBurned.cpp

@@ -110,6 +110,7 @@ int main(int argc, char** argv) {
 
                          //Output values
                          system("pause");
+                         break;
                          }//end case '2'
                          
             case '3':{
@@ -137,6 +138,7 @@ int main(int argc, char** argv) {
 
                  //Output values
                          system("pause");
+                         break;
                  }//end case '3'
                  
             case '4':{
@@ -242,18 +244,20 @@ int main(int argc, char** argv) {
                                   
                                   case '5': {
                                        cout << "Exiting the tutor! \n";
+                                       system("pause");
                                        return 1;   //success 
-                          
+                                       
                                        }//end case 5
                 
                                   default: {
                                            cout << "You've chosen an invalid option! Returning you to tutor... \n";
-                                           //system("pause");
-                                           //break;    
-                          
+                                           system("pause");
                                            }//end case default  
                           }//end switch menu
                 }while(true); //end do while loop
+                //Output values
+                         system("pause");
+                         return 0;               
                 }//end case '4'
     
            case '5':{
@@ -275,6 +279,8 @@ int main(int argc, char** argv) {
     
                          system("pause");
                          }
+                         //Break out of case'5'                         
+                         break;   
            
            case '6':{
                 //Gaddis_8thEd_Chapter5_Prob4_CaloriesBurnt.cpp
@@ -289,7 +295,8 @@ int main(int argc, char** argv) {
                 }//end for loop
 
                 cout << "\n\n";
-                system("pause");  
+                system("pause");
+                break;   
                 
            }//end case '6'
             
@@ -304,6 +311,7 @@ int main(int argc, char** argv) {
                                cout << endl;               
                           }
                  }//end for loop
+                 break; 
             }//end case '7'    
             
             case '8':{
@@ -334,6 +342,7 @@ int main(int argc, char** argv) {
                       }
                       //Output values
                       system("pause");
+                      break; 
                }
                
                case '9':{
@@ -361,7 +370,7 @@ int main(int argc, char** argv) {
     
                     cout << "\n\n";
                     system("pause");
-                           
+                    break; 
                            
                }//end case '9'
                  
@@ -369,6 +378,7 @@ int main(int argc, char** argv) {
                          cout<<"You are exiting the program"<<endl;
                }
     }while(choice>='1'&&choice<='9');
+    
     
     //Exit stage right!
     return 0;

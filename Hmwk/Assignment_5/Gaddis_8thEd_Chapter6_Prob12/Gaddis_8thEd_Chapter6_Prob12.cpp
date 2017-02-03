@@ -32,7 +32,7 @@ float calcScore(float, float, float, float, float);
 int findHighest(float, float, float, float, float);
 int findLowest(float, float, float, float, float);
 
-int main()
+int main(int argc, char** argv)
 {
 	float Score1, Score2, Score3, Score4, Score5;
 

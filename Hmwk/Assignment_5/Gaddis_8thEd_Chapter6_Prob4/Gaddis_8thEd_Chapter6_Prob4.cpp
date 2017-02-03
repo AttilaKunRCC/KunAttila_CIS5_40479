@@ -1,5 +1,5 @@
 /* 
-  File:   Gaddis_8thEd_Chapter6_Prob3.cpp
+  File:   Gaddis_8thEd_Chapter6_Prob4.cpp
   Author: Attila Kun
   Created on February 1, 2017, 11:20 PM
   Purpose:  

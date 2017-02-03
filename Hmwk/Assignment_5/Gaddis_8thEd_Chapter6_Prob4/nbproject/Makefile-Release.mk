@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Gaddis_8thEd_Chapter6_Prob3.o
+	${OBJECTDIR}/Gaddis_8thEd_Chapter6_Prob4.o
 
 
 # C Compiler Flags
@@ -62,10 +62,10 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter6_prob4.exe: ${OB
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter6_prob4 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Gaddis_8thEd_Chapter6_Prob3.o: Gaddis_8thEd_Chapter6_Prob3.cpp
+${OBJECTDIR}/Gaddis_8thEd_Chapter6_Prob4.o: Gaddis_8thEd_Chapter6_Prob4.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chapter6_Prob3.o Gaddis_8thEd_Chapter6_Prob3.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chapter6_Prob4.o Gaddis_8thEd_Chapter6_Prob4.cpp
 
 # Subprojects
 .build-subprojects:

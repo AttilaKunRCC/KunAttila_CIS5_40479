@@ -21,6 +21,8 @@ Input Validation: Do not accept negative numbers for any data.
 
 //System Libraries
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
 
 //Function Prototypes
@@ -32,15 +34,14 @@ int main(int argc, char** argv) {
     //Declare Variables
     char inOut; //for in-patient or out-patient
     int NumberDays; //number of days in hospital
-    float dailyRate, servCharges, medCharges, totCharges;
+    float dailyRate, servCharges, medCharges, totalCharges;
     
     //Input values
     cout<<"Is the patient still in the hospital! Enter 'I' for in-patient and 'O'\n";
     cin>>inOut;
     
     //Process by mapping inputs to outputs
-    switch(inOut)
-	{
+    switch(inOut){
 		case 'i' :
 		case 'I' :  do{
 				cout << "How many days were spent in the hospital? ";
@@ -66,22 +67,36 @@ int main(int argc, char** argv) {
                                     }
 			    } while (servCharges < 0);
 		
-				    do
-				    {
-				    	cout << "Enter the hospital medication charges: ";
-				    	cin  >> medCharges;
+                                do{
+			    	cout << "Enter the hospital medication charges: ";
+			    	cin  >> medCharges;
+                                    if (medCharges < 0){
+                                        cout << "Hospital medication charges must be greater than 0.\n";
+                                    }
+				} while(medCharges < 0);
 
-				    	if (medCharges < 0)
-				    	{
-				    		cout << "Hospital medication charges must be greater than 0.\n";
-				    	}
-				    } while(medCharges < 0);
+    }
+    cout << right << fixed << showpoint << setprecision(2);
 
-	}
-					
-    
-    //Output values
+    switch(inOut){
+		case 'i' :
+		case 'I' : totalCharges = calcData(NumberDays, dailyRate, servCharges, medCharges);
+				cout << "Number of days spent in the hospital : " << setw(11) << NumberDays << endl;
+				cout << "Daily rate                           : $" << setw(10) << dailyRate << endl;
+				break;
+		case 'o' :
+		case 'O' : totalCharges = calcData(servCharges, medCharges);		
+	}//end switch (inOut)
 
-    //Exit stage right!
-    return 0;
+    cout << "Charges for hospital services: $" << setw(10) << servCharges << endl;
+    cout << "Hospital medication charges  : $" << setw(10) << medCharges << endl;
+    cout << "Total charges                : $" << setw(10) << totalCharges << endl;	
+
+        return 0;   
+}
+float calcData(int NumOfDays, float DailyRate, float ServChges, float MedChges){
+       return (NumOfDays * DailyRate) + calcData(ServChges, MedChges);
+}
+float calcData(float ServChges, float MedChges){
+       return ServChges + MedChges;
 }

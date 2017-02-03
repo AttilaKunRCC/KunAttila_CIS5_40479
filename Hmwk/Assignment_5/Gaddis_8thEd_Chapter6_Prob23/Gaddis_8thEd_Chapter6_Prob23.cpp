@@ -9,6 +9,10 @@ that stores a list of all the prime numbers from 1 through 100 in a file.
 */
 #include <iostream>
 #include <iomanip>
+#include <fstream>
+#include <cstring>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 //function prototype
@@ -16,15 +20,24 @@ bool isPrime(int);
 
 int main(int argc, char** argv)
 {
-    int number;
-    cout << "Enter a number to find out if it's prime or not: ";
-    cin >> number;
+    int number;    
+    isPrime(number); 
     
-    if(isPrime(number))
-        cout << "The number " << number << " is prime.\n";
-    else 
-        cout << "The number " << number << " is not prime.\n";
+    //Read the name of the file
+    const int SIZE=20;
+    char fileName[SIZE];
+    cout<<"Type in a file name to use"<<endl;
+    cin.getline(fileName,SIZE);
     
+    //Fill this file with numbers
+    ofstream output(fileName);
+    int amountOfData=100;
+    for(int i=1;i<amountOfData;i++){
+        cout << 
+    }
+    
+    //Close the file
+    output.close();
     return 0;
 }
 bool isPrime(int number){
@@ -33,8 +46,5 @@ bool isPrime(int number){
         if(number % i == 0){
             return false;
         }//end inner if
-    }//end outer if
-    
-    //Close the file
-    output.close();
+    }//end outer if    
 }//end bool isPrime function

@@ -1,5 +1,5 @@
 /* 
-  File:   Gaddis_8thEd_Chapter7_Prob1_DisplaySmallestLargest.cpp
+  File:   Gaddis_8thEd_Chapter7_Prob1_DisplaySmallestLargest
   Author: Attila Kun
   Created on January 4, 2017, 13:53 PM
   Purpose:  Largest/Smallest Array Values
@@ -20,18 +20,18 @@ int main(int argc, char** argv) {
     int small, large,n;
     large = small = values[0];
     
-    //Input values
+    //Repeated Input values
     for(int i=0;i<n;i++)
 	{
-		cout<<"Enter element "<<i+1<<":";
+		cout<<"Enter elements from 1 to 10: ";
 		cin>>values[i];
 	}
             
-    //Process by mapping inputs to outputs
+    //Assign small and large the first character input
     small=values[0];
     large=values[0];
     
-    //Output values
+    //Compare to find small and large
    for(int i=1;i<n;i++)
 	{
 		if(values[i]<small)
@@ -39,9 +39,9 @@ int main(int argc, char** argv) {
 		if(values[i]>large)
 			large=values[i];
 	}
-
-	cout<<"\nLargest element is :"<<large;
-	cout<<"\nSmallest element is :"<<small;
+    //display largest and smallest
+    cout<<"\nLargest element is :"<<large;
+    cout<<"\nSmallest element is :"<<small;
 
     //Exit stage right!
     return 0;

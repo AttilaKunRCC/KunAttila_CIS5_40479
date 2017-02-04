@@ -1,0 +1,6 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00000017
+eax=00000000 ebx=00000017 ecx=0022CA78 edx=6EDF6868 esi=612F479B edi=611D9DB2
+ebp=000000E8 esp=0022CC90 program=C:\Users\victim\Desktop\KunAttila_CIS5_40479\Hmwk\Assignment_6\Gaddis_8thEd_Chapter7_Prob1_DisplaySmallestLargest\dist\Debug\Cygwin_1-Windows\gaddis_8thed_chapter7_prob1_displaysmallestlargest.exe, pid 3788, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args

@@ -21,8 +21,8 @@ test the program. (The companion Web site is at www.pearsonhighered.com/gaddis .
 using namespace std;
 
 //Function Prototypes
-int highest(int [], int, int);
 int lowest(int [], int, int);
+int highest(int [], int, int);
 int getTotal(int [], int, int);
 int average(int [], int, int n);
 
@@ -51,9 +51,9 @@ int main(int argc, char** argv) {
             cout << numbers[count] << " ";
             cout << endl;
             
-            
-    highest(numbers, ARRAY_SIZE, n); // Calling function 
-    lowest(numbers, ARRAY_SIZE, n); // Calling function
+    // Calling functions       
+    lowest(numbers, ARRAY_SIZE, n); 
+    highest(numbers, ARRAY_SIZE, n); 
     getTotal(numbers, ARRAY_SIZE, n);
     average(numbers, ARRAY_SIZE, n);
     
@@ -62,55 +62,45 @@ int main(int argc, char** argv) {
     
 } //end main
 
-int lowest(int numbers[], int ARRAY_SIZE, int n){
-    cout << " The value of 'n': ";
-    cin >> n;
+int lowest(int numbers[], int ARRAY_SIZE, int lowest){
+    lowest = numbers[0];
+    for(int count = 0; count < ARRAY_SIZE; count++){        
+        if(numbers[count]<lowest) 
+            lowest = numbers[count];
+    }//end for
     
-    for(int count = 0; count < ARRAY_SIZE; count++){
-        
-        if(numbers[count]>n)
-            cout << numbers[count] << " " << endl;
-    
-    }//end for  
-    
+cout << "The lowest number is " << lowest << endl;
 }//end void lowest
 
 
-int highest(int numbers[], int ARRAY_SIZE, int n){
-    cout << " The value of 'n': ";
-    cin >> n;
+int highest(int numbers[], int ARRAY_SIZE, int highest){
+    highest = numbers[0];
+    for(int count = 0; count < ARRAY_SIZE; count++){        
+        if(numbers[count]>highest)
+            highest = numbers[count];
+    }//end for
     
-    for(int count = 0; count < ARRAY_SIZE; count++){
-        
-        if(numbers[count]>n)
-        
-    cout << numbers[count] << " " << endl;
-    
-    }//end for  
-    
+cout << "The highest number is " << highest << endl;
 }//end void highest
 
-
 // Get the total
-int getTotal(int units[], int ARRAY_SIZE, int n){
-        int total = 0;
-        
-        for(int count = 0; count < ARRAY_SIZE; count++ )
-            total += units[count];
-        
-        return total;
+int getTotal(int numbers[], int ARRAY_SIZE, int total){
+        total = 0 ;
+        for(int count = 0; count < ARRAY_SIZE; count++ ){
+            total += numbers[count];
+        }//end for
+
+cout << "The total of the numbers is " << total << endl;        
 }
 
-int average(int numbers[], int ARRAY_SIZE, int n){
-    int total = 0;
-    int average;
-    
-    for(int count = 0; count < ARRAY_SIZE; count++){
-        
+int average(int numbers[], int ARRAY_SIZE, int average){
+    int total = 0;    
+    for(int count = 0; count < ARRAY_SIZE; count++){        
         total += numbers[count];
-        average = total / ARRAY_SIZE;
+    average = total / ARRAY_SIZE;    
+    }//end for 
     
-    }//end for  
+cout << "The average of the numbers is " << average << endl;  
     
 }//end void average
 

@@ -32,8 +32,6 @@ int highest(int arraynums[], int SIZE, int n){
     cout << " The value of 'n': ";
     cin >> n;
     
-    //int highest = arraynums[0];
-    
     for(int count = 0; count < SIZE; count++){
         
         if(arraynums[count]>n)

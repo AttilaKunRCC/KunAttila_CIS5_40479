@@ -70,7 +70,7 @@ int lowest(int numbers[], int ARRAY_SIZE, int lowest){
     }//end for
     
 cout << "The lowest number is " << lowest << endl;
-}//end void lowest
+}//end int lowest
 
 
 int highest(int numbers[], int ARRAY_SIZE, int highest){
@@ -81,7 +81,7 @@ int highest(int numbers[], int ARRAY_SIZE, int highest){
     }//end for
     
 cout << "The highest number is " << highest << endl;
-}//end void highest
+}//end int highest
 
 // Get the total
 int getTotal(int numbers[], int ARRAY_SIZE, int total){
@@ -91,7 +91,7 @@ int getTotal(int numbers[], int ARRAY_SIZE, int total){
         }//end for
 
 cout << "The total of the numbers is " << total << endl;        
-}
+}//end int getTotal
 
 int average(int numbers[], int ARRAY_SIZE, int average){
     int total = 0;    
@@ -102,7 +102,7 @@ int average(int numbers[], int ARRAY_SIZE, int average){
     
 cout << "The average of the numbers is " << average << endl;  
     
-}//end void average
+}//end int average
 
 
 

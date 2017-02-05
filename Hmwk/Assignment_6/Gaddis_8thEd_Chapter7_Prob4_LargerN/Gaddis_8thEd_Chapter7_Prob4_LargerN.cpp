@@ -13,22 +13,23 @@ display all of the numbers in the array that are greater than the number n .
 using namespace std;
 
 //Function Prototypes
-void arrayFunction(int[], int, int); 
+void showValue(int[], int); 
 
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    int n;
-    cout << "Enter the value: " << endl;
-    cin >> n;
-    
-    
-    //Input values
-    
-    //Process by mapping inputs to outputs
-    
-    //Output values
+    const int SIZE = 20;
+    int numbers[SIZE] = {5, 10, 15, 20, 25, 30, 35, 40};
+
+    showValue(numbers, SIZE); // Calling function   
 
     //Exit stage right!
     return 0;
+}
+
+void showValue(int nums[], int size) // Function Definiton
+{
+    for(int index = 0; index < size; index++)
+        cout << nums[index] << " ";
+    cout << endl;
 }

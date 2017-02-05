@@ -17,12 +17,14 @@ test the program. (The companion Web site is at www.pearsonhighered.com/gaddis .
 
 //System Libraries
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 //Function Prototypes
 int highest(int [], int, int);
 int lowest(int [], int, int);
-int getAverage(int rainFall[]);
+int getTotal(int rainFall[]);
+int average(int [], int, int n);
 
 //Executable code begins here!!!
 int main(int argc, char** argv) {
@@ -34,7 +36,7 @@ int main(int argc, char** argv) {
     
     // Open the file
     //asks the user for a file name
-    inputFile.open("TenNumbers.txt");
+    inputFile.open("numbers.txt");
     
     // Read the numbers from the file into the array.
     while (count < ARRAY_SIZE && inputFile >> numbers[count])
@@ -50,9 +52,10 @@ int main(int argc, char** argv) {
             cout << endl;
             
             
-    highest(arraynums, SIZE, n); // Calling function   
-    lowest(arraynums, SIZE, n); // Calling function
-    getAverage(rainFall[]);
+    highest(numbers[], SIZE, n); // Calling function   
+    lowest(numbers[], SIZE, n); // Calling function
+    getTotal();
+    average(numbers[], SIZE, n);
     
     //Exit stage right!
     return 0;
@@ -87,26 +90,32 @@ int lowest(int arraynums[], int SIZE, int n){
     
 }//end void lowest
 
-int average(int arraynums[], int SIZE, int n){
-    cout << " The value of 'n': ";
-    cin >> n;
-    
-    for(int count = 0; count < SIZE; count++){
+// Get the total
+int getTotal(int units[NUM_UNITS]){
+        int total = 0;
+        const int NUM_UNITS = 24;
+        int units[NUM_UNITS];
         
-        if(arraynums[count]>n)
-            cout << arraynums[count] << " " << endl;
+        for(int count = 0; count < NUM_UNITS; count++ )
+            total += units[count];
+        
+        return total;
+}
+
+int average(int numbers[ARRAY_SIZE], int SIZE, int n){
+    int total = 0;
+    int average;
+    
+    for(int count = 0; count < ARRAY_SIZE; count++){
+        
+        total += scores[count];
+        average = total / ARRAY_SIZE;
     
     }//end for  
     
 }//end void average
 
-// Get the total and calculate the average
-int getAverage(int rainFall[]){
-        int average = 0.0;
-	average= getTotal(rainFall)/NUM_MONTHS;
-        
-        return average;
-}
+
 
  
  

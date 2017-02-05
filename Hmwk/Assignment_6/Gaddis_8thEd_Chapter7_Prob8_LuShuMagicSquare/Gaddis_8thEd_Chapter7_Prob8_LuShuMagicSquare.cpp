@@ -20,7 +20,7 @@ using namespace std;
 
 // Global constants
 const int COLS = 3;      // Number of columns in each array
-const int TBL_ROWS = 3; // Number of rows in table1
+const int ROWS = 3;         // Number of rows in table1
 
 //Function Prototypes
 int showArray(const int [][COLS], int); // Function prototype
@@ -28,24 +28,20 @@ int showArray(const int [][COLS], int); // Function prototype
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    int table[TBL_ROWS][COLS] = {{1, 2, 3,},
-                                  {4, 5, 6,},
-                                  {7, 8, 9}};
+    int table[ROWS][COLS] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
     
     //Input values
    cout << "The contents of table are:\n";
    
-   showArray(table, TBL_ROWS);
-    
-    //Output values
+   showArray(table, ROWS);
 
     //Exit stage right!
     return 0;
 }
 
-int showArray(int array[][COLS], int TBL_ROWS){
-    int rows = 0;
-    for (int x = 0; x < rows; x++)
+int showArray(const int array[][COLS], int rows)
+{
+   for (int x = 0; x < rows; x++)
    {
       for (int y = 0; y < COLS; y++)
       {

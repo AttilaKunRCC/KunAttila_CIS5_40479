@@ -58,15 +58,13 @@ int main(int argc, char** argv) {
     //Input values
     //Loop for users answers
     for (int replies = 0; replies < numQuestions; replies++){
-        cout<< "Please enter your answers (Hint: Use capital letters): "
-            << (replies + 1) << ": ";
+        cout<< "Please enter your answers (Hint: Use capital letters): " << (replies + 1) << ": ";
         cin >> stu_answers[replies];
         
     //Validation of users answers
         while (stu_answers[replies] != 'A' && stu_answers[replies] != 'B' && stu_answers[replies] != 'C' && stu_answers[replies] != 'D') {
             cout << "You must enter A, B, C, or D\n";
-            cout<< "Please enter your answers (Hint: Use capital letters): "
-                << (replies + 1) << ": ";
+            cout<< "Please enter your answers (Hint: Use capital letters): " << (replies + 1) << ": ";
             cin >> stu_answers[replies];
         }//end while
    }//end for

@@ -1,2 +1,0 @@
-build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chapter7_Prob8_LuShuMagicSquare.o: \
- Gaddis_8thEd_Chapter7_Prob8_LuShuMagicSquare.cpp

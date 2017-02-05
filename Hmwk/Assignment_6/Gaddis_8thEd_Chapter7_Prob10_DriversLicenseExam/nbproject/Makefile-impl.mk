@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Gaddis_8thEd_Chapter7_Prob8_LuShuMagicSquare
+PROJECTNAME=Gaddis_8thEd_Chapter7_Prob10_DriversLicenseExam
 
 # Active Configuration
 DEFAULTCONF=Debug

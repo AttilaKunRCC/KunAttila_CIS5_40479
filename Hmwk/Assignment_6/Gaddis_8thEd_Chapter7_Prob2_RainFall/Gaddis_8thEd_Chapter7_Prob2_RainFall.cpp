@@ -83,20 +83,20 @@ int main(int argc, char** argv) {
     
 // Get Total, takes array and reads values from the array to get total.
 // It goes for 0 to 11 (remember arrays start at 0)
-    float getTotal(float rainFall[]){
+float getTotal(float rainFall[]){
     float total = 0;
     for (int count = 0; count < NUM_MONTHS; count++)
         total += rainFall[count];
     
-    return total;
-    }
+return total;
+}
     
 // Get the total and calculate the average
 float getAverage(float rainFall[]){
         float average = 0.0;
 	average= getTotal(rainFall)/NUM_MONTHS;
         
-        return average;
+return average;
 }
     
 float getLargest(float rainFall[], int &subscript){    
@@ -110,7 +110,7 @@ float getLargest(float rainFall[], int &subscript){
                               subscript = month;
                          }
             }
-    return largest;
+return largest;
 }
 
 float getSmallest(float rainFall[],  int &subscript){

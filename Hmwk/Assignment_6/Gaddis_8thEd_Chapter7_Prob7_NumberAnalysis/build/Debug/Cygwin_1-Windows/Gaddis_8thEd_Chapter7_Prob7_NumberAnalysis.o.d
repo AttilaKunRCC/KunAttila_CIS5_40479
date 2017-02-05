@@ -1,0 +1,2 @@
+build/Debug/Cygwin_1-Windows/Gaddis_8thEd_Chapter7_Prob7_NumberAnalysis.o: \
+ Gaddis_8thEd_Chapter7_Prob7_NumberAnalysis.cpp

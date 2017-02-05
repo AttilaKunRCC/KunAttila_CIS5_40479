@@ -23,7 +23,7 @@ using namespace std;
 //Function Prototypes
 int highest(int [], int, int);
 int lowest(int [], int, int);
-int getTotal(int rainFall[]);
+int getTotal(int [], int, int);
 int average(int [], int, int n);
 
 //Executable code begins here!!!
@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     //Declare Variables
     const int ARRAY_SIZE = 12; // Array size
     int numbers[ARRAY_SIZE]; // Array with 10 elements
-    int count = 0; // Loop counter variable
+    int count = 0, n, units; // Loop counter variable
     ifstream inputFile; // Input file stream object
     
     // Open the file
@@ -52,63 +52,62 @@ int main(int argc, char** argv) {
             cout << endl;
             
             
-    highest(numbers[], SIZE, n); // Calling function   
-    lowest(numbers[], SIZE, n); // Calling function
-    getTotal();
-    average(numbers[], SIZE, n);
+    highest(numbers, ARRAY_SIZE, n); // Calling function 
+    lowest(numbers, ARRAY_SIZE, n); // Calling function
+    getTotal(numbers, ARRAY_SIZE, n);
+    average(numbers, ARRAY_SIZE, n);
     
     //Exit stage right!
     return 0;
     
 } //end main
 
-
-int highest(int arraynums[], int SIZE, int n){
+int lowest(int numbers[], int ARRAY_SIZE, int n){
     cout << " The value of 'n': ";
     cin >> n;
     
-    for(int count = 0; count < SIZE; count++){
+    for(int count = 0; count < ARRAY_SIZE; count++){
         
-        if(arraynums[count]>n)
-        
-    cout << arraynums[count] << " " << endl;
-    
-    }//end for  
-    
-}//end void highest
-
-int lowest(int arraynums[], int SIZE, int n){
-    cout << " The value of 'n': ";
-    cin >> n;
-    
-    for(int count = 0; count < SIZE; count++){
-        
-        if(arraynums[count]>n)
-            cout << arraynums[count] << " " << endl;
+        if(numbers[count]>n)
+            cout << numbers[count] << " " << endl;
     
     }//end for  
     
 }//end void lowest
 
-// Get the total
-int getTotal(int units[NUM_UNITS]){
-        int total = 0;
-        const int NUM_UNITS = 24;
-        int units[NUM_UNITS];
+
+int highest(int numbers[], int ARRAY_SIZE, int n){
+    cout << " The value of 'n': ";
+    cin >> n;
+    
+    for(int count = 0; count < ARRAY_SIZE; count++){
         
-        for(int count = 0; count < NUM_UNITS; count++ )
+        if(numbers[count]>n)
+        
+    cout << numbers[count] << " " << endl;
+    
+    }//end for  
+    
+}//end void highest
+
+
+// Get the total
+int getTotal(int units[], int ARRAY_SIZE, int n){
+        int total = 0;
+        
+        for(int count = 0; count < ARRAY_SIZE; count++ )
             total += units[count];
         
         return total;
 }
 
-int average(int numbers[ARRAY_SIZE], int SIZE, int n){
+int average(int numbers[], int ARRAY_SIZE, int n){
     int total = 0;
     int average;
     
     for(int count = 0; count < ARRAY_SIZE; count++){
         
-        total += scores[count];
+        total += numbers[count];
         average = total / ARRAY_SIZE;
     
     }//end for  

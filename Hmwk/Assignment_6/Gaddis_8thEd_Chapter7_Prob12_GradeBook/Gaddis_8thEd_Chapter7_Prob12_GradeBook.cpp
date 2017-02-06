@@ -24,7 +24,7 @@ Input Validation: Do not accept test scores less than 0 or greater than 100.
 //System Libraries
 #include <iostream>
 using namespace std;
-    const int NUM_NAMES = 5;                    //how many occurances
+    const int NUM_NAMES = 5;                    //how many occurrences
     const int NAMESIZE = 11;                    //how long names can be, 10 letters
     const int NUM_TESTS = 4;                    //how many tests
     char name[NUM_NAMES][NAMESIZE];             //two-dimensional name array

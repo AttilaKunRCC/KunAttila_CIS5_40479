@@ -12,7 +12,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp</itemPath>
+      <itemPath>Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +36,7 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp"
+      <item path="Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -62,7 +62,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp"
+      <item path="Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.cpp"
             ex="false"
             tool="1"
             flavor2="0">

@@ -1,26 +1,9 @@
 /* 
-  File:   Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp
+  File:   Gaddis_8thEd_Chapter7_Prob12_GradeBook.cpp
   Author: Attila Kun
   Created on January 5, 2017, 13:15 PM
-  Purpose:  Grade Book
-A teacher has five students who have taken four tests. The teacher uses the following
-grading scale to assign a letter grade to a student, based on the average of his or her
-four test scores.
-Test Score  Letter Grade
-90–100      A
-80–89       B
-70–79       C
-60–69       D
-0–59        F
-Write a program that uses an array of string objects to hold the five student names,
-an array of five characters to hold the five students’ letter grades, and five arrays of
-four double s to hold each student’s set of test scores.
-The program should allow the user to enter each student’s name and his or her four
-test scores. It should then calculate and display each student’s average test score and a
-letter grade based on the average.
-Input Validation: Do not accept test scores less than 0 or greater than 100.
- * 
- * --> Modify the grade book application in Programming Challenge 13 so it drops each student’s
+  Purpose:  Grade Book Modification
+Modify the grade book application in Programming Challenge 13 so it drops each student’s
 lowest score when determining the test score averages and letter grades.
  */
 
@@ -32,14 +15,16 @@ using namespace std;
     const int NUM_TESTS = 4;                    //how many tests
     char name[NUM_NAMES][NAMESIZE];             //two-dimensional name array
     char grade[5];                              //grade letter for each student array
-    double testscore[NUM_NAMES][NUM_TESTS];     //test score for each student
-    double average[5];                          //average for each student array
+    float testscore[NUM_NAMES][NUM_TESTS];     //test score for each student
+    float average[5];                          //average and lowest for each student array
+    
     //function prototype
-    void getLowest(const int testscore[][], int size);
-    void calcdata(int, double[][NUM_TESTS]);
+    void calcdata(int, float[][NUM_TESTS]);
+    
     //start of main
-    int main()
-    {
+int main(int argc, char** argv) {
+    float lowest, total;
+    
     cout <<  "Enter the student's name. \n";
     for (int count = 0; count < NUM_NAMES; count++)
     {
@@ -50,7 +35,7 @@ using namespace std;
     	{
     		for (int testnum = 0; testnum < NUM_TESTS; testnum++)
     		{
-    			cout << "what is the test score for " << name[student];
+    			cout << "what is the NUMBER test score for " << name[student];
     			cout << " for test:" << testnum+1<< endl;
     			cin >> testscore[student][testnum];
     	
@@ -63,40 +48,31 @@ using namespace std;
     			}
     		}
     	}
-    //call to function calcdata
+    
+    // Get the lowest test score.
+   lowest = getLowest(grade, NUM_TESTS);
+
+   // Subtract the lowest score from the total.
+   total -= lowest;
+
+   // Calculate the average. Divide by 3 because
+   // the lowest test score was dropped.
+   average = total / (NAMESIZE - 1);
+    //call to function
     calcdata(NUM_NAMES, testscore);
  
     return 0;
-    } //end of main
+} //end of main
     
-void getLowest(const double array[], int size)
-{
-   double lowest;  // To hold the lowest value
-
-   // Get the first array's first element.
-   lowest = array[0];
-
-   // Step through the rest of the array. When a
-   // value less than lowest is found, assign it
-   // to lowest.
-   for (int count = 1; count < size; count++)
-   {
-      if (array[count] < lowest)
-         lowest = array[count];
-   }
-
-   // Return the lowest value.
-   return lowest;
-}
-    
-    void calcdata(int NUM_NAMES, double testscore[][NUM_TESTS])
+void calcdata(int NUM_NAMES, float testscore[][NUM_TESTS])
     {
-    	double total;
+    float total, lowest;
     //get each students average score
     for (int row = 0; row < NUM_NAMES; row++)
     {
     	//set the accumulator.
     	total = 0;
+        
     	//sum a row
     	for (int col = 0; col < NUM_TESTS; col++)
     	
@@ -117,9 +93,29 @@ void getLowest(const double array[], int size)
     			grade[row] = 'A';
     			
     }
+    
     for (int i = 0; i < 5; i++)
     cout << "Student: " << name[i]
           <<" average: " << average[i]
            <<" grade: " << grade[i]
            << endl;
-    } //end of getdata
+} //end
+float getLowest(const float array[], int size)
+{
+   float lowest;  // To hold the lowest value
+
+   // Get the first array's first element.
+   lowest = array[0];
+
+   // Step through the rest of the array. When a
+   // value less than lowest is found, assign it
+   // to lowest.
+   for (int count = 1; count < size; count++)
+   {
+      if (array[count] < lowest)
+         lowest = array[count];
+   }
+
+   // Return the lowest value.
+   return lowest;
+}

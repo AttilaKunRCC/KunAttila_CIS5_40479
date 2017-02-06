@@ -32,11 +32,9 @@ using namespace std;
     float testscore[NUM_NAMES][NUM_TESTS];     //test score for each student
     float average[5];                          //average for each student array
     //function prototype
-    void findLowest(int, float[][NUM_TESTS]);
     void calcdata(int, float[][NUM_TESTS]);
     //start of main
-    int main()
-    {
+int main(int argc, char** argv) {
     cout <<  "Enter the student's name. \n";
     for (int count = 0; count < NUM_NAMES; count++)
     {
@@ -47,7 +45,7 @@ using namespace std;
     	{
     		for (int testnum = 0; testnum < NUM_TESTS; testnum++)
     		{
-    			cout << "what is the test score for " << name[student];
+    			cout << "what is the NUMBER test score for " << name[student];
     			cout << " for test:" << testnum+1<< endl;
     			cin >> testscore[student][testnum];
     	
@@ -61,16 +59,13 @@ using namespace std;
     		}
     	}
     
-    //call to function findLowest
-    findLowest(NUM_NAMES,testscore);
-    
-    //call to function calcdata
+    //call to function
     calcdata(NUM_NAMES, testscore);
  
     return 0;
-    } //end of main
+} //end of main
     
-    void calcdata(int NUM_NAMES, float testscore[][NUM_TESTS])
+void calcdata(int NUM_NAMES, float testscore[][NUM_TESTS])
     {
     	float total;
     //get each students average score
@@ -103,4 +98,4 @@ using namespace std;
           <<" average: " << average[i]
            <<" grade: " << grade[i]
            << endl;
-    } //end of getdata
+} //end

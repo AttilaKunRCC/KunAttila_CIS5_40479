@@ -23,7 +23,7 @@ AS=as
 # Macros
 CND_PLATFORM=Cygwin_1-Windows
 CND_DLIB_EXT=dll
-CND_CONF=Release
+CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 
@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.o
+	${OBJECTDIR}/Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.o
 
 
 # C Compiler Flags
@@ -56,16 +56,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter7_prob13_gradebookmodification.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter7_prob5_monkeybusiness.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter7_prob13_gradebookmodification.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter7_prob5_monkeybusiness.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter7_prob13_gradebookmodification ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaddis_8thed_chapter7_prob5_monkeybusiness ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.o: Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp
+${OBJECTDIR}/Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.o: Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.o Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.o Gaddis_8thEd_Chapter7_Prob5_MonkeyBusiness.cpp
 
 # Subprojects
 .build-subprojects:

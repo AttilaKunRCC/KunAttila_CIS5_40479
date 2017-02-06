@@ -1,5 +1,5 @@
 /* 
-  File:   Gaddis_8thEd_Chapter7_Prob12_GradeBook.cpp
+  File:   Gaddis_8thEd_Chapter7_Prob13_GradeBookModification.cpp
   Author: Attila Kun
   Created on January 5, 2017, 13:15 PM
   Purpose:  Grade Book
@@ -14,11 +14,14 @@ Test Score  Letter Grade
 0–59        F
 Write a program that uses an array of string objects to hold the five student names,
 an array of five characters to hold the five students’ letter grades, and five arrays of
-four float s to hold each student’s set of test scores.
+four double s to hold each student’s set of test scores.
 The program should allow the user to enter each student’s name and his or her four
 test scores. It should then calculate and display each student’s average test score and a
 letter grade based on the average.
 Input Validation: Do not accept test scores less than 0 or greater than 100.
+ * 
+ * --> Modify the grade book application in Programming Challenge 13 so it drops each student’s
+lowest score when determining the test score averages and letter grades.
  */
 
 //System Libraries
@@ -29,11 +32,11 @@ using namespace std;
     const int NUM_TESTS = 4;                    //how many tests
     char name[NUM_NAMES][NAMESIZE];             //two-dimensional name array
     char grade[5];                              //grade letter for each student array
-    float testscore[NUM_NAMES][NUM_TESTS];     //test score for each student
-    float average[5];                          //average for each student array
+    double testscore[NUM_NAMES][NUM_TESTS];     //test score for each student
+    double average[5];                          //average for each student array
     //function prototype
-    void findLowest(int, float[][NUM_TESTS]);
-    void calcdata(int, float[][NUM_TESTS]);
+    void getLowest(const int testscore[][], int size);
+    void calcdata(int, double[][NUM_TESTS]);
     //start of main
     int main()
     {
@@ -60,19 +63,35 @@ using namespace std;
     			}
     		}
     	}
-    
-    //call to function findLowest
-    findLowest(NUM_NAMES,testscore);
-    
     //call to function calcdata
     calcdata(NUM_NAMES, testscore);
  
     return 0;
     } //end of main
     
-    void calcdata(int NUM_NAMES, float testscore[][NUM_TESTS])
+void getLowest(const double array[], int size)
+{
+   double lowest;  // To hold the lowest value
+
+   // Get the first array's first element.
+   lowest = array[0];
+
+   // Step through the rest of the array. When a
+   // value less than lowest is found, assign it
+   // to lowest.
+   for (int count = 1; count < size; count++)
+   {
+      if (array[count] < lowest)
+         lowest = array[count];
+   }
+
+   // Return the lowest value.
+   return lowest;
+}
+    
+    void calcdata(int NUM_NAMES, double testscore[][NUM_TESTS])
     {
-    	float total;
+    	double total;
     //get each students average score
     for (int row = 0; row < NUM_NAMES; row++)
     {

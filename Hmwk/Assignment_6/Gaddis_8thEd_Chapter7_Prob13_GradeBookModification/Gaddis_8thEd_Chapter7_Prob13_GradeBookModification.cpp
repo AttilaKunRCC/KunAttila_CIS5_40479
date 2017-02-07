@@ -15,14 +15,15 @@ using namespace std;
 void calcdata(int, float);
 void getLowest(const float, int);
 
+float testscore[NUM_NAMES][];               //test score for each student
+char name[][NUM_NAMES];                     //two-dimensional name array
+const int NUM_NAMES = 5;                    //how many occurrences for names
+const int NAMESIZE = 11;                    //how long names can be, 10 letters
+char grade[5];                              //grade letter for each student array
+const int NUM_TESTS = 4;                    //how many tests per student
+
 //start of main
-int main(int argc, char** argv) {
-    float testscore[NUM_NAMES][NUM_TESTS];     //test score for each student
-    char name[NUM_NAMES][NAMESIZE];             //two-dimensional name array
-    const int NUM_NAMES = 5;                    //how many occurrences for names
-    const int NAMESIZE = 11;                    //how long names can be, 10 letters
-    char grade[5];                              //grade letter for each student array
-    const int NUM_TESTS = 4;                    //how many tests per student
+int main(int argc, char** argv) { 
     
     cout <<  "Enter the student's name. \n";
     for (int count = 0; count < NUM_NAMES; count++)
@@ -49,7 +50,7 @@ int main(int argc, char** argv) {
     	}
     
     // Get the lowest test score.
-   getLowest(grade, NUM_TESTS);
+    getLowest(grade, NUM_TESTS);
 
     //call to function
     calcdata(NUM_NAMES, testscore);
@@ -96,7 +97,7 @@ void calcdata(int NUM_NAMES, float testscore[][NUM_TESTS])
            << endl;
 } //end
 void getLowest(const float array[], int size){
-    float lowest; 
+   float lowest;
    // Get the first array's first element.
    lowest = array[0];
 
@@ -108,14 +109,4 @@ void getLowest(const float array[], int size){
       if (array[count] < lowest)
          lowest = array[count];
    }
-   
-   // Subtract the lowest score from the total.
-   total -= lowest;
-
-   // Calculate the average. Divide by 3 because
-   // the lowest test score was dropped.
-   average = total / (NAMESIZE - 1);
-
-   // Return the lowest value.
-   return lowest;
 }

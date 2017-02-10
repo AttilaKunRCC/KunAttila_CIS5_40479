@@ -16,6 +16,7 @@ char letter,usedLetters[40];
 //string word[100];
  
 char hang[17][17]{
+
 '0','0','0','0','0','0','0','0','0','0','0','0','0',' ',' ',' ',' ',//1
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',//2
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',//3
@@ -109,8 +110,7 @@ void display(){
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    std::ifstream inf("words");
-    //ifstream inf;
+    ifstream inf;
     inf.open("words");
     chosenWord=6;       //chosen words
     int nWords=0;       //number words
@@ -124,40 +124,21 @@ int main(int argc, char** argv) {
     }
     if(!inf.is_open()){
         cout<<"The file \"words.txt\" does not exist";
-        return 1;
+        return 0;
     }
     inf.clear();
     inf.seekg(0,ios::beg); //to read the file a second time, we reset the reading pointer
     
     //Input values
     cout<<"We will choose a random word from \"words.txt\"";
-    cout<<endl;
-    cout<<word;
-    cout<<"Insert a smaller number than ";
-    cout<<nWords;
-    cout<<endl;
-    cin>>chosenWord;
-    
-    if(chosenWord>=nWords)
-    {
-        cout<<"You typed a wrong number";
-        return 0;
-    }
- 
-    nWords=0;
-    while(getline(inf,String))
-    {
-        if(chosenWord==nWords) 
-           helper=String;
-        nWords++;
-        cout<<nWords<<endl; 
-    };
+    //cout<<word;
     
     //string helper;
-    cout<<helper;
+    //cout<<helper;
     strcpy(word,helper.c_str());
-    cout <<"Insert the word \n";
+    cout <<"\nInsert the word \n";
     cin.getline(word,100);
+    
     for(i=0; i<strlen(word); i++)
     {
         word[i]=tolower(word[i]);
@@ -167,6 +148,7 @@ int main(int argc, char** argv) {
 while(leftLetters>0)
     {
         display();
+
         if(tries<1)
         {
             cout<<"You didn't win...";

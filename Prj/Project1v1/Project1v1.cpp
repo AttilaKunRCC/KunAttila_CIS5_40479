@@ -16,30 +16,29 @@ char word[100];
 char letter,usedLetters[40];
 //string word[100];
  
-char hang[17][17]
-{
+char hang[17][17]{
 //1   2   3   4   5   6   7   8   9   1   1   2   3   4   5   6   7
-    {'0','0','0','0','0','0','0','0','0','0','0','0','0',' ',' ',' ',' '},//1
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' '},//2
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' '},//3
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//4
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//5
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//6
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//7
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//8
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//9
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//1
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//1
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//2
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//3
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//4
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//5
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},//6
-    {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}//7
+   '0','0','0','0','0','0','0','0','0','0','0','0','0',' ',' ',' ',' ',//1
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',//2
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',//3
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//4
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//5
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//6
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//7
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//8
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//9
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//1
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//1
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//2
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//3
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//4
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//5
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//6
+    '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; //7
 
-};
+
 bool guessLetters[20],guess=true;
-int i,leftNumbers,tries=6,chosenWord;       //tries = number of attempts; 
+int i,leftLetters,tries=6,chosenWord;       //tries = number of attempts; 
 
 //Function Prototypes
 void mistakes()
@@ -111,11 +110,10 @@ void display(){
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    ifstream inf("words.txt");
+    ifstream inf("words");
     chosenWord=6;       //chosen words
     int nWords=0;       //number words
-    string string;
-    string Helper;
+    string string, helper;
  
     while(getline(inf,string))
     {
@@ -149,23 +147,66 @@ int main(int argc, char** argv) {
     while(getline(inf,string))
     {
         if(chosenWord==nWords) 
-            Helper=string;
+           helper=string;
         nWords++;
         cout<<nWords<<endl; 
-    }
-    cout<<Helper;
-    strcpy(word,Helper.c_str());
+    };
+    
+    //string helper;
+    cout<<helper;
+    strcpy(word,helper.c_str());
     cout <<"Insert the word \n";
-    // cin.getline(word,100);
+    
     for(i=0; i<strlen(word); i++)
     {
         word[i]=tolower(word[i]);
     }
-    leftNumbers=strlen(word);
+    leftLetters=strlen(word);
     
-    //Process by mapping inputs to outputs
-    
-    //Output values
+while(leftLetters>0)
+    {
+        display();
+
+        if(tries<1)
+        {
+            cout<<"You didn't win...";
+            cout<<endl;
+            cout<<"This is the word :";
+            cout<<endl;
+            cout<<word;
+            break;
+        }
+        cout<<"You ";
+        cout<<tries;
+        cout<<" tries.";
+        cout<<endl;
+        cout<<"You have ";
+        cout<<leftLetters;
+        cout<<" letters left";
+        cout<<endl;
+        cout<<"Type a letter :  ";
+        cin>>letter;
+
+        letter=tolower(letter);
+        cout<<endl;
+        guess=false;
+        for(i=0; i<strlen(word); i++)
+        {
+            if(letter==word[i])
+            {
+                if(guess==false) 
+                    leftLetters--;
+                guessLetters[i]=true;
+                guess=true;
+            }
+        }
+        if(guess==false)
+        {
+            tries--;
+            mistakes();
+        }
+    }
+    cout<<"Congrats, you guessed the word :\n"<<word;
 
     //Exit stage right!
     return 0;

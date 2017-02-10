@@ -110,7 +110,8 @@ void display(){
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    ifstream inf("words");
+    ifstream inf;
+    inf.open("words");
     chosenWord=6;       //chosen words
     int nWords=0;       //number words
     string string, helper;
@@ -156,7 +157,7 @@ int main(int argc, char** argv) {
     cout<<helper;
     strcpy(word,helper.c_str());
     cout <<"Insert the word \n";
-    
+    cin.getline(word,100);
     for(i=0; i<strlen(word); i++)
     {
         word[i]=tolower(word[i]);

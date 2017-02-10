@@ -16,7 +16,6 @@ char letter,usedLetters[40];
 //string word[100];
  
 char hang[17][17]{
-//1   2   3   4   5   6   7   8   9   1   1   2   3   4   5   6   7
 '0','0','0','0','0','0','0','0','0','0','0','0','0',' ',' ',' ',' ',//1
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',//2
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',//3
@@ -34,6 +33,7 @@ char hang[17][17]{
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//5
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',//6
 '0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; //7
+//1   2   3   4   5   6   7   8   9   1   1   2   3   4   5   6   7
 
 
 bool guessLetters[20],guess=true;
@@ -109,8 +109,9 @@ void display(){
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //Declare Variables
-    ifstream inf;
-    inf.open("words.txt");
+    std::ifstream inf("words");
+    //ifstream inf;
+    inf.open("words");
     chosenWord=6;       //chosen words
     int nWords=0;       //number words
     string String, helper;
@@ -123,10 +124,10 @@ int main(int argc, char** argv) {
     }
     if(!inf.is_open()){
         cout<<"The file \"words.txt\" does not exist";
-        return 0;
+        return 1;
     }
     inf.clear();
-    inf.seekg(0); //to read the file a second time, we reset the reading pointer
+    inf.seekg(0,ios::beg); //to read the file a second time, we reset the reading pointer
     
     //Input values
     cout<<"We will choose a random word from \"words.txt\"";
@@ -166,7 +167,6 @@ int main(int argc, char** argv) {
 while(leftLetters>0)
     {
         display();
-
         if(tries<1)
         {
             cout<<"You didn't win...";

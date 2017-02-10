@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Lab6_markSrt
+PROJECTNAME=Project1v1
 
 # Active Configuration
 DEFAULTCONF=Debug

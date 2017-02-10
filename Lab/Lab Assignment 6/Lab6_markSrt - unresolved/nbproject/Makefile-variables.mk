@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Debug=lab6_marksrt
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/lab6_marksrt
+CND_ARTIFACT_NAME_Debug=lab6_marksrt_-_unresolved
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/lab6_marksrt_-_unresolved
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Debug=lab6marksrt.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/lab6marksrt.tar
+CND_PACKAGE_NAME_Debug=lab6marksrt-unresolved.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/lab6marksrt-unresolved.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Release=lab6_marksrt
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/lab6_marksrt
+CND_ARTIFACT_NAME_Release=lab6_marksrt_-_unresolved
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/lab6_marksrt_-_unresolved
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Release=lab6marksrt.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/lab6marksrt.tar
+CND_PACKAGE_NAME_Release=lab6marksrt-unresolved.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/lab6marksrt-unresolved.tar
 #
 # include compiler specific variables
 #

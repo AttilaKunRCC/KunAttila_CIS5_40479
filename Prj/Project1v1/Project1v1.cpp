@@ -2,8 +2,7 @@
   File:   Project1v1
   Author: Attila Kun
   Created on January 8, 2017, 22:00 PM
-  Purpose:  Template to be used in all programming
-            projects!
+  Purpose:  The Hangman game with graphics
  */
 
 //System Libraries
@@ -111,12 +110,12 @@ void display(){
 int main(int argc, char** argv) {
     //Declare Variables
     ifstream inf;
-    inf.open("words");
+    inf.open("words.txt");
     chosenWord=6;       //chosen words
     int nWords=0;       //number words
-    string string, helper;
+    string String, helper;
  
-    while(getline(inf,string))
+    while(getline(inf,String))
     {
         nWords++;
         cout<<nWords<<endl;
@@ -145,10 +144,10 @@ int main(int argc, char** argv) {
     }
  
     nWords=0;
-    while(getline(inf,string))
+    while(getline(inf,String))
     {
         if(chosenWord==nWords) 
-           helper=string;
+           helper=String;
         nWords++;
         cout<<nWords<<endl; 
     };
